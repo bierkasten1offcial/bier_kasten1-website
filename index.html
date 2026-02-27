@@ -55,8 +55,20 @@ h1 {
 p {
     font-size:1.7rem;
     color:#ccc;
-    margin-bottom:50px;
+    margin-bottom:20px;
     text-shadow:0 0 5px #000;
+}
+
+.info {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgba(0,255,255,0.05);
+    border: 2px solid #00ffff;
+    border-radius: 12px;
+    text-shadow: 0 0 5px #00ffff;
+    font-size: 1.4rem;
+    color: #00ffff;
+    animation: pulseInfo 2s infinite alternate;
 }
 
 .links {
@@ -110,9 +122,16 @@ p {
     100% { transform: scale(1); }
 }
 
+@keyframes pulseInfo {
+    0% { box-shadow: 0 0 5px #00ffff; }
+    50% { box-shadow: 0 0 20px #00ffff; }
+    100% { box-shadow: 0 0 5px #00ffff; }
+}
+
 @media (max-width:500px){
     h1{ font-size:3rem; }
     p{ font-size:1.2rem; }
+    .info { font-size:1rem; padding:12px; margin-bottom:30px; }
     .btn{ font-size:1rem; padding:12px 0; }
 }
 </style>
@@ -126,6 +145,12 @@ p {
     <h1>bier_kasten1</h1>
     <p>Gaming, Streams & Fun – Sei live dabei!</p>
 
+    <!-- INFO SECTION -->
+    <div class="info">
+        Hallo, ich bin der <strong>bier_kasten1</strong> und möchte ein Streamer sowie YouTuber werden. 🎮✨
+    </div>
+
+    <!-- SOCIAL LINKS -->
     <div class="links">
         <a class="btn" href="https://twitch.tv/bier_kasten1" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Twitch_logo_2019.svg" alt="Twitch Icon"> Twitch
